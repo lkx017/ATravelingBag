@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.admin.tripapplication">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <meta-data
+        android:name="io.fabric.ApiKey"
+        android:value="29cbd600bb8183011201895a931db91e93f2d614" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".JoinActivity">
+            <intent-filter>
+                <action android:name="adroid.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="m84td.app.goo.gl"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".googlemap.MapsActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBsuZoJL7NTRYAzIEjuOMTVhLH0Q6RE34c" />
+
+        <activity android:name=".json.JsonActivity" />
+        <activity android:name=".json.Json1Activity" />
+        <activity android:name=".json.Json2Activity" />
+        <activity android:name=".VisitActivity" />
+        <activity android:name=".VisitItemActivity" />
+        <activity android:name=".LVisitActivity" />
+        <activity android:name=".storage.StorageActivity" />
+        <activity android:name=".cameraAction.FaceActivity" />
+        <activity android:name=".cameraAction.LocationService" />
+        <activity android:name=".sns.WriteActivity" />
+
+        <activity
+            android:name=".sns.datWriteActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".sns.MyProActivity"></activity>
+
+        <activity
+            android:name=".BLU.Step"
+            android:label="추적기 등록"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".BLU.Details"
+            android:label="세부 사항"></activity>
+    </application>
+
+</manifest>

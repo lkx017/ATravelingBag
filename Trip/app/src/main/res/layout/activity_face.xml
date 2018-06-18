@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.admin.tripapplication.camera.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.example.admin.tripapplication.camera.GraphicOverlay
+            android:id="@+id/faceOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.example.admin.tripapplication.camera.CameraSourcePreview>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:weightSum="5"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:src="@drawable/cha" />
+
+        <ImageButton
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:src="@drawable/pororo_s" />
+
+        <ImageButton
+            android:id="@+id/btn6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:src="@drawable/moomin_s" />
+
+        <ImageButton
+            android:id="@+id/btn7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:src="@drawable/pikachu_s" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:src="@drawable/ca" />
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:src="@drawable/cb" />
+
+        <ImageButton
+            android:id="@+id/btn3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:src="@drawable/s" />
+    </LinearLayout>
+
+</RelativeLayout>

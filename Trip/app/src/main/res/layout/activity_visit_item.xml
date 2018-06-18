@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imageVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notimage" />
+
+        <TextView
+            android:id="@+id/tvVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이름"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/addrVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="주소"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/viewVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="개요"
+            android:textSize="19dp" />
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+    </LinearLayout>
+</ScrollView>
